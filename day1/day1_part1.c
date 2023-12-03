@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int num_repr_of_char(char ch)
+int num_repr_of_char(char* ch)
 {
-    switch (ch)
+    switch (*ch)
     {
     case '1':
         return 1;
@@ -61,7 +61,7 @@ int calculate_magic_number(char text[])
                 break;
             }
 
-            int current_num = num_repr_of_char(current_char);
+            int current_num = num_repr_of_char(&current_char);
 
             if (current_num == 0)
             {
